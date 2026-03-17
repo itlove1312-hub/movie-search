@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КиноПоиск Клон</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== Header ===================== -->
+    <header>
+        <input type="text" id="search" placeholder="Поиск фильмов...">
+        <select id="sort">
+            <option value="default">Сортировка</option>
+            <option value="rating">По рейтингу</option>
+            <option value="year">По году</option>
+            <option value="title">По названию</option>
+        </select>
+        <button onclick="showFav()">Избранное ❤️</button>
+        <button onclick="clearFav()">Очистить 🗑️</button>
+    </header>
+
+    <!-- ===================== Навигация категорий ===================== -->
+    <nav id="categoryNav">
+        <button class="cat-btn active" data-cat="all">Все</button>
+        <button class="cat-btn" data-cat="action">Боевик</button>
+        <button class="cat-btn" data-cat="drama">Драма</button>
+        <button class="cat-btn" data-cat="fantasy">Фантастика</button>
+    </nav>
+
+    <!-- ===================== Список фильмов ===================== -->
+    <div id="movies" class="movies"></div>
+
+    <!-- ===================== Модальное окно ===================== -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div id="modalTrailer"></div>
+            <h3>Похожие фильмы</h3>
+            <div id="similar" class="similar"></div>
+        </div>
+    </div>
+
+    <!-- ===================== Слайдер избранного ===================== -->
+    <div id="favSliderContainer">
+        <h3>Избранное</h3>
+        <div id="favSlider" class="favSlider"></div>
+    </div>
+
+    <!-- Подключаем JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
